@@ -131,6 +131,20 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+      .mobile-link {
+        @apply text-on-surface-variant hover:text-primary transition-colors;
+      }
+      .mobile-link {
+        display: block;
+        color: #514443;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .mobile-link:hover {
+        color: #7e4f50;
+      }
     </style>
   </head>
   <body
@@ -176,7 +190,7 @@
             >Contact</a
           >
         </div>
-        <button class="md:hidden p-2">
+        <button class="md:hidden p-2" id="menuBtn">
           <span
             class="material-symbols-outlined text-on-surface-variant"
             data-icon="menu"
@@ -184,6 +198,17 @@
           >
         </button>
       </nav>
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-outline-variant/30 glass"
+      >
+        <div class="flex flex-col px-6 py-4 gap-4">
+          <a href="#about" class="mobile-link">About</a>
+          <a href="#education" class="mobile-link">Education</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#footer" class="mobile-link">Contact</a>
+        </div>
+      </div>
     </header>
     <main>
       <!-- Hero / Biography Section -->
@@ -687,6 +712,24 @@
           if (link.getAttribute('href').includes(current)) {
             link.classList.add('text-primary');
           }
+        });
+      });
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+
+        const icon = menuBtn.querySelector('span');
+        icon.textContent = mobileMenu.classList.contains('hidden')
+          ? 'menu'
+          : 'close';
+      });
+
+      document.querySelectorAll('.mobile-link').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuBtn.querySelector('span').textContent = 'menu';
         });
       });
     </script>
