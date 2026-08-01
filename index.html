@@ -1,0 +1,694 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sumaia Afroze | Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              surface: '#fcf9f8',
+              'inverse-primary': '#f4b7b7',
+              'secondary-fixed': '#f1dede',
+              'on-error': '#ffffff',
+              tertiary: '#5c5c5c',
+              'surface-dim': '#dcd9d9',
+              'on-secondary-container': '#6d5f5f',
+              'inverse-on-surface': '#f3f0f0',
+              'on-secondary-fixed-variant': '#504444',
+              'surface-tint': '#815252',
+              'surface-container-high': '#eae7e7',
+              'on-tertiary-fixed': '#1b1b1c',
+              'on-background': '#1b1c1c',
+              'on-tertiary-fixed-variant': '#474747',
+              'inverse-surface': '#303030',
+              'on-primary': '#ffffff',
+              'primary-fixed-dim': '#f4b7b7',
+              'on-secondary': '#ffffff',
+              'on-tertiary': '#ffffff',
+              primary: '#7e4f50',
+              'surface-container-lowest': '#ffffff',
+              outline: '#837373',
+              'on-surface-variant': '#514443',
+              'primary-fixed': '#ffdad9',
+              'tertiary-container': '#757474',
+              'secondary-container': '#eedbdb',
+              'secondary-fixed-dim': '#d5c2c2',
+              secondary: '#695b5b',
+              'error-container': '#ffdad6',
+              'tertiary-fixed': '#e4e2e2',
+              'surface-bright': '#fcf9f8',
+              error: '#ba1a1a',
+              'primary-container': '#9a6767',
+              'outline-variant': '#d5c2c1',
+              background: '#fcf9f8',
+              'surface-container': '#f0eded',
+              'tertiary-fixed-dim': '#c8c6c6',
+              'on-secondary-fixed': '#231919',
+              'on-primary-container': '#fffbff',
+              'on-surface': '#1b1c1c',
+              'on-primary-fixed': '#321112',
+              'on-primary-fixed-variant': '#663b3b',
+              'surface-container-highest': '#e4e2e1',
+              'surface-variant': '#e4e2e1',
+              'surface-container-low': '#f6f3f2',
+              'on-error-container': '#93000a',
+              'on-tertiary-container': '#fffcfc',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            spacing: {
+              gutter: '24px',
+              'section-gap': '160px',
+              unit: '8px',
+              'container-max': '1120px',
+              'margin-mobile': '20px',
+            },
+            fontFamily: {
+              body: ['Inter', 'sans-serif'],
+              display: ['Cormorant Garamond', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      #profileImage {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .glass {
+        background: rgba(252, 249, 248, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .hero-gradient {
+        background:
+          radial-gradient(circle at 80% 20%, #ffdad9 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, #f1dede 0%, transparent 40%);
+      }
+      .section-fade {
+        mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          black 10%,
+          black 90%,
+          transparent
+        );
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden"
+  >
+    <!-- Sticky Top Navigation -->
+    <header
+      class="sticky top-0 w-full z-50 glass border-b border-outline-variant/30"
+    >
+      <nav
+        class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto"
+      >
+        <a class="flex items-center gap-2 group" href="#">
+          <span
+            class="material-symbols-outlined text-primary text-3xl transition-transform group-hover:rotate-12"
+            data-icon="school"
+            >school</span
+          >
+          <span
+            class="text-2xl font-display font-semibold text-primary tracking-tight"
+            >Sumaia Afroze</span
+          >
+        </a>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="text-sm font-medium uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-sm font-medium uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#education"
+            >Education</a
+          >
+          <a
+            class="text-sm font-medium uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-sm font-medium uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#footer"
+            >Contact</a
+          >
+        </div>
+        <button class="md:hidden p-2">
+          <span
+            class="material-symbols-outlined text-on-surface-variant"
+            data-icon="menu"
+            >menu</span
+          >
+        </button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero / Biography Section -->
+      <section
+        class="relative min-h-[90vh] flex items-center pt-20 hero-gradient"
+        id="about"
+      >
+        <div
+          class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-16 items-center"
+        >
+          <div class="md:col-span-7 relative z-10">
+            <h1
+              class="text-5xl md:text-7xl leading-[1.05] text-on-surface mb-8"
+            >
+              Bridging Knowledge <br />
+              &amp; Innovation.
+            </h1>
+            <p
+              class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl mb-12 font-light italic"
+            >
+              Hi, I'm Sumaia Afroze Computer Science & Engineering Student.
+              Passionate about technology, continuous learning, and building
+              solutions through code. I aspire to become a skilled software
+              engineer who creates meaningful digital experiences.
+            </p>
+            <div class="flex flex-wrap gap-6">
+              <a
+                class="bg-primary text-on-primary px-10 py-4 rounded-full hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all duration-300 flex items-center gap-3 group"
+                href="#projects"
+              >
+                Projects
+                <span
+                  class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform"
+                  data-icon="arrow_outward"
+                  >arrow_outward</span
+                >
+              </a>
+              <!-- <button
+                class="glass px-10 py-4 rounded-full text-primary font-medium hover:bg-white/50 transition-all duration-300 border border-primary/20"
+              >
+                Download CV
+              </button> -->
+            </div>
+          </div>
+
+          <div class="md:col-span-5 relative">
+            <div
+              class="aspect-[4/5] bg-white p-3 rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700"
+            >
+              <div
+                class="w-full h-full rounded-xl overflow-hidden relative hover:grayscale transition-all duration-1000"
+              >
+                <img
+                  id="profileImage"
+                  class="w-full h-full object-cover"
+                  data-alt="Sumaia Afroze Portrait"
+                  src="https://i.ibb.co.com/r2V7ZV1X/IMG-5594.avif"
+                />
+                <div
+                  class="absolute inset-0 bg-primary/5 mix-blend-multiply"
+                ></div>
+              </div>
+            </div>
+            <!-- Decorative element -->
+            <div
+              class="absolute -top-10 -right-10 w-48 h-48 bg-primary-fixed opacity-40 -z-10 rounded-full blur-3xl animate-pulse"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Programming Languages Section -->
+      <section
+        class="py-section-gap bg-surface relative overflow-hidden"
+        id="languages"
+      >
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="text-center mb-20">
+            <span
+              class="text-xs font-bold uppercase tracking-[0.2em] text-primary block mb-4"
+            >
+              Technical Skills
+            </span>
+
+            <h2 class="text-5xl md:text-6xl text-on-surface">
+              Programming Languages
+            </h2>
+
+            <p
+              class="mt-6 text-lg italic font-light text-on-surface-variant max-w-2xl mx-auto"
+            >
+              Programming languages I have studied and applied in academic
+              coursework and practical programming projects.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- C -->
+            <div
+              class="glass rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-primary text-5xl">
+                code
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface">C</h3>
+
+              <p class="text-primary font-medium">Intermediate</p>
+            </div>
+
+            <!-- C++ -->
+            <div
+              class="glass rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-primary text-5xl">
+                terminal
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">C++</h3>
+
+              <p class="text-primary font-medium">Beginner</p>
+            </div>
+
+            <!-- Java -->
+            <div
+              class="glass rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-primary text-5xl">
+                coffee
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">Java</h3>
+
+              <p class="text-primary font-medium">Beginner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Academic Journey (Timeline) -->
+      <section class="bg-surface relative overflow-hidden" id="education">
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-24 gap-6"
+          >
+            <div class="max-w-2xl">
+              <span
+                class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block"
+                >Curriculum Vitae</span
+              >
+              <h2 class="text-5xl md:text-6xl text-on-surface">
+                Academic Journey
+              </h2>
+              <p class="mt-6 text-on-surface-variant font-light text-lg italic">
+                Every step of my academic journey has strengthened my knowledge,
+                enhanced my skills, and inspired me to achieve more.
+              </p>
+            </div>
+          </div>
+          <div class="relative space-y-12">
+            <!-- Ph.D. Item -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center group"
+            >
+              <div class="md:col-span-3">
+                <span
+                  class="text-2xl font-display text-primary/60 group-hover:text-primary transition-colors"
+                  >2025 — 2028</span
+                >
+              </div>
+              <div
+                class="md:col-span-9 glass p-8 md:p-12 rounded-3xl hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+                >
+                  <div>
+                    <h5 class="text-3xl font-display text-on-surface mb-2">
+                      Daffodil Internationl University
+                    </h5>
+                    <p class="text-primary font-medium tracking-wide">
+                      University
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary/20 text-5xl"
+                    data-icon="auto_stories"
+                    >auto_stories</span
+                  >
+                </div>
+                <!-- <p
+                  class="mt-6 text-on-surface-variant leading-relaxed max-w-2xl"
+                >
+                  Research focused on the intersection of digital frameworks and
+                  cognitive development in higher education environments.
+                </p> -->
+              </div>
+            </div>
+            <!-- Master's Item -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center group"
+            >
+              <div class="md:col-span-3">
+                <span
+                  class="text-2xl font-display text-primary/60 group-hover:text-primary transition-colors"
+                  >2021 — 2022</span
+                >
+              </div>
+              <div
+                class="md:col-span-9 glass p-8 md:p-12 rounded-3xl hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+                >
+                  <div>
+                    <h5 class="text-3xl font-display text-on-surface mb-2">
+                      Milestone College
+                    </h5>
+                    <p class="text-primary font-medium tracking-wide">
+                      HSC:2023
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary/20 text-5xl"
+                    data-icon="auto_stories"
+                    >auto_stories</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Bachelor's Item -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center group"
+            >
+              <div class="md:col-span-3">
+                <span
+                  class="text-2xl font-display text-primary/60 group-hover:text-primary transition-colors"
+                  >2019 — 2020
+                </span>
+              </div>
+              <div
+                class="md:col-span-9 glass p-8 md:p-12 rounded-3xl hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+                >
+                  <div>
+                    <h5 class="text-3xl font-display text-on-surface mb-2">
+                      Holy Crescent School
+                    </h5>
+                    <p class="text-primary font-medium tracking-wide">
+                      SSC:2021
+                    </p>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary/20 text-5xl"
+                    data-icon="auto_stories"
+                    >auto_stories</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        class="py-section-gap bg-background relative overflow-hidden"
+        id="projects"
+      >
+        <div class="max-w-container-max mx-auto px-gutter">
+          <div class="text-center mb-20">
+            <span
+              class="text-xs font-bold uppercase tracking-[0.2em] text-primary block mb-4"
+            >
+              Portfolio
+            </span>
+
+            <h2 class="text-5xl md:text-6xl text-on-surface">
+              Academic Projects
+            </h2>
+
+            <p
+              class="mt-6 text-lg italic font-light text-on-surface-variant max-w-2xl mx-auto"
+            >
+              A collection of projects completed throughout different university
+              courses that helped strengthen my programming, electronics, and
+              problem-solving skills.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div
+              class="glass rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-5xl mb-6"
+              >
+                contacts
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">
+                Simple Phonebook
+              </h3>
+
+              <p class="text-primary font-medium mb-4">
+                Course: PPS • Language: C
+              </p>
+
+              <p class="text-on-surface-variant leading-relaxed">
+                A console-based phonebook application that allows users to add,
+                search, edit, and delete contact information efficiently.
+              </p>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+              class="glass rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-5xl mb-6"
+              >
+                inventory_2
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">
+                Store Management System
+              </h3>
+
+              <p class="text-primary font-medium mb-4">
+                Course: Data Structure • Language: C
+              </p>
+
+              <p class="text-on-surface-variant leading-relaxed">
+                A simple inventory management system implementing data
+                structures for product management, searching, updating, and
+                stock control.
+              </p>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+              class="glass rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-5xl mb-6"
+              >
+                lightbulb
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">
+                LED Chaser Circuit
+              </h3>
+
+              <p class="text-primary font-medium mb-4">
+                Course: Electrical Circuit
+              </p>
+
+              <p class="text-on-surface-variant leading-relaxed">
+                Designed and implemented an LED chaser circuit demonstrating
+                sequential lighting using electronic components and timing
+                concepts.
+              </p>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+              class="glass rounded-3xl p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-5xl mb-6"
+              >
+                sensors
+              </span>
+
+              <h3 class="text-3xl font-display text-on-surface mb-3">
+                Obstacle Detector
+              </h3>
+
+              <p class="text-primary font-medium mb-4">
+                Course: Electronic Device and Circuit
+              </p>
+
+              <p class="text-on-surface-variant leading-relaxed">
+                Developed an obstacle detection system using electronic sensors
+                to identify nearby objects and provide real-time indication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact / Footer Section -->
+      <section
+        class="p-[50px] bg-on-surface text-surface relative overflow-hidden"
+        id="footer"
+      >
+        <div
+          class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"
+        ></div>
+        <div
+          class="max-w-container-max mx-auto px-gutter relative z-10 text-center"
+        >
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-8"
+          >
+            <div class="text-left">
+              <h2 class="text-3xl text-primary font-display font-bold">
+                Sumaia Afroze
+              </h2>
+              <p
+                class="text-surface/50 text-sm mt-2 tracking-widest uppercase"
+                id="copyright"
+              ></p>
+            </div>
+            <div class="flex gap-4">
+              <a
+                href="mailto:afrozesumaia74@gmail.com"
+                class="bg-surface text-on-surface w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <span class="material-symbols-outlined" data-icon="mail">
+                  mail
+                </span>
+              </a>
+              <a
+                class="bg-surface text-on-surface w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                href="https://www.linkedin.com/in/sumaia-afroze-198621353/"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    d="M4.98 3.5C4.98 4.6 4.09 5.5 3 5.5S1.02 4.6 1.02 3.5 1.91 1.5 3 1.5s1.98.9 1.98 2zM1.5 8h3V22h-3V8zm7 0h2.88v1.91h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V22h-3v-6.38c0-1.52-.03-3.48-2.12-3.48-2.12 0-2.44 1.66-2.44 3.37V22h-3V8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const images = [
+        'https://i.ibb.co.com/r2V7ZV1X/IMG-5594.avif',
+        'https://i.ibb.co.com/0yZ9fq4r/IMG-0954.jpg',
+        'https://i.ibb.co.com/dJQTJ2jD/IMG-5713.jpg',
+      ];
+
+      const profileImage = document.getElementById('profileImage');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        // Fade out
+        profileImage.style.opacity = '0';
+
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          profileImage.src = images[currentIndex];
+
+          // Fade in
+          profileImage.style.opacity = '1';
+        }, 500);
+      }, 3000);
+      // Smooth scroll adjustment for sticky header
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          const offset = 80; // height of sticky nav
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = target.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        });
+      });
+      document.getElementById('copyright').innerText =
+        `© ${new Date().getFullYear()}. All rights reserved.`;
+      // Simple scroll spy for navigation highlight
+      window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        let current = '';
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('text-primary');
+          if (link.getAttribute('href').includes(current)) {
+            link.classList.add('text-primary');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
